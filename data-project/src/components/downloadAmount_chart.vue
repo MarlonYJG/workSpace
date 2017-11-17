@@ -9,7 +9,7 @@
 
     <div class="tabel">
       <p>设备分布</p>
-      <div id="distribution"> -->
+      <div id="distribution">
           <el-amap :vid="'amap-vue'" :center="center" :zoom="zoom" :mapStyle="dark" :plugin="plugin" :events="events"></el-amap>
       </div>
     </div>
@@ -156,13 +156,32 @@ export default {
                         data: this.lineData
                     }
                 ]
-            })
+            });
         },
+        moke:function(){
+            var that=this;
+            setInterval(function(){
+                that.lineData.forEach(function(i,item,arr){
+                    arr[item]=i+(Math.random()*100-50);
+                });
+                that.barData.forEach(function(i,item,arr){
+                    arr[item]=i+(Math.random()*(50-5+1));
+                });
+                console.log(Math.random()*100-50);
+                that.darwEch("start");
+            },3000);
+        }
+        
+    },
+    activated(){
+        // this.darwEch("start");
     },
     mounted(){
         this.$nextTick(function() {
             this.darwEch("start");
-        })
+            // this.moke();
+        });
+       
     }
 }
 </script>
@@ -175,6 +194,9 @@ export default {
     border: 1px solid #495060;
     margin-top: 15px; 
 }
+.tabel:nth-child(2){
+    height: 380px;
+}
 .tabel p{
     text-align: center;
     height: 25px;
@@ -186,6 +208,9 @@ export default {
     height: 263px;
     padding: 5px 10px;
    
+}
+.tabel:nth-child(2)>div{
+    height: 358px;
 }
 .tabel:nth-child(3){
     height: 400px;

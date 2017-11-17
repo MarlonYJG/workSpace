@@ -7,7 +7,7 @@ import AMap from 'vue-amap';
 import Layout from './layout'
 import router from './router'
 import 'iview/dist/styles/iview.css';    // 使用 CSS
-
+import echarts from 'echarts'
 
 Vue.config.productionTip = false
 
