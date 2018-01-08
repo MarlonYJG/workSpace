@@ -16,12 +16,17 @@ export default {
       myChart:''
     }
   },
+  computed: {
+    picObj(){
+        return this.$store.getters.getPicObj;
+    }  
+  },
   methods:{
     drawPie:function(id){
       this.myChart = echarts.init(document.getElementById(id))
       this.option = {
           title : {
-              text: '近七日下载量',
+              text: '',
               subtext: '纯属虚构',
               x:'center'
           },
@@ -32,15 +37,14 @@ export default {
           legend: {
               orient: 'vertical',
               x: 'right',
-              data:['知乎','营销广告','搜索引擎','邮件营销','联盟广告','视频广告','百度','谷歌','必应','其他']
+              data:this.picObj.legendTitle
           },
           series: [
               {
                   name:'访问来源',
                   type:'pie',
                   selectedMode: 'single',
-                  radius: [0, '30%'],
-
+                  radius: [0, '33%'],
                   label: {
                       normal: {
                           position: 'inner'
@@ -51,11 +55,7 @@ export default {
                           show: false
                       }
                   },
-                  data:[
-                      {value:335, name:'知乎', selected:true},
-                      {value:679, name:'微博'},
-                      {value:1548, name:'豆瓣'}
-                  ]
+                  data:this.picObj.dataIn
               },
               {
                   name:'访问来源',
@@ -64,32 +64,32 @@ export default {
                   label: {
                       normal: {
                           formatter: '{a|{a}}{abg|}\n{hr|}\n  {b|{b}：}{c}  {per|{d}%}  ',
-                          backgroundColor: '#eee',
-                          borderColor: '#aaa',
+                          backgroundColor: '#1c2438',
+                          borderColor: '#80848f',
                           borderWidth: 1,
                           borderRadius: 4,
-                          // shadowBlur:3,
-                          // shadowOffsetX: 2,
-                          // shadowOffsetY: 2,
-                          // shadowColor: '#999',
-                          // padding: [0, 7],
+                          shadowBlur:3,
+                          shadowOffsetX: 2,
+                          shadowOffsetY: 2,
+                        //   shadowColor: '#999',
+                          padding: [0, 7],
                           rich: {
                               a: {
                                   color: '#999',
                                   lineHeight: 22,
                                   align: 'center'
                               },
-                              // abg: {
-                              //     backgroundColor: '#333',
-                              //     width: '100%',
-                              //     align: 'right',
-                              //     height: 22,
-                              //     borderRadius: [4, 4, 0, 0]
-                              // },
+                              abg: {
+                                  backgroundColor: '#1c2438',
+                                  width: '100%',
+                                  align: 'right',
+                                  height: 22,
+                                  borderRadius: [4, 4, 0, 0]
+                              },
                               hr: {
                                   borderColor: '#aaa',
                                   width: '100%',
-                                  borderWidth: 0.5,
+                                  borderWidth: 0.1,
                                   height: 0
                               },
                               b: {
@@ -105,16 +105,7 @@ export default {
                           }
                       }
                   },
-                  data:[
-                      {value:335, name:'知乎'},
-                      {value:310, name:'微博'},
-                      {value:234, name:'微博'},
-                      {value:135, name:'微博'},
-                      {value:1048, name:'百度'},
-                      {value:251, name:'谷歌'},
-                      {value:147, name:'必应'},
-                      {value:102, name:'其他'}
-                  ]
+                  data:this.picObj.dataOut
               }
           ]
       };
@@ -125,6 +116,7 @@ export default {
     this.$nextTick(function(){
       this.drawPie('week-chart');
     })
+    // console.log(this.picObj);
   }
 }
 </script>

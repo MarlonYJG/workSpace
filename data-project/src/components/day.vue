@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>近七日下载量</p>
+    <p>单设备日均使用时长</p>
     <div id="day-chart" class="equip">
 
     </div>
@@ -23,16 +23,15 @@ export default {
                   "fontSize": 32,
                   "color": '#13C766'
               },
-              subtext:'CPU使用率',
+              subtext:'使用时长',
               "subtextStyle": {
                   "fontWeight": 'normal',
                   "fontSize": 17,
                   "color": '#00A8F7'
               },
-              left:130,
-              itemGap:20
-
-
+              text:''
+            //   left:130,
+            //   itemGap:20
           },
           series: [
               {
@@ -188,27 +187,48 @@ export default {
       }
     }
   },
+  watch: {
+      
+  },
+  computed: {
+      dayTime(){
+        return this.$store.getters.getDataTime;
+      }
+  },
   methods:{
     drawPie:function(id){
-      this.myChart = echarts.init(document.getElementById(id))
-      var value_ = (100 - 55) * 266 / 360;
+      this.myChart = echarts.init(document.getElementById(id));
+      this.option.title.textStyle.color='#13C766';
+      this.option.title.subtext='日均使用时长';
+      //随机数
+          this.a();
+           
+    },
+    a:function(){
+            var value_ = (100 - (this.dayTime)) * 266 / 360;
+          this.option.title.text = (this.dayTime) +"%";
 
-        this.option.title.textStyle.color='#13C766';
-        this.option.title.subtext='obj.itemName';
+          this.option.series[1].data[0].value=0.3;
+          this.option.series[1].data[1].value = value_;
+          this.option.series[1].data[2].value = 0.2;
+          this.option.series[1].data[3].value = (75 - value_-1);
 
-        this.option.title.text = 55+"%";
-        this.option.series[1].data[0].value=0.3;
-        this.option.series[1].data[1].value = value_;
-        this.option.series[1].data[2].value = 0.2;
-        this.option.series[1].data[3].value = (75 - value_-1);
-
-      this.myChart.setOption(this.option,true);
+          this.myChart.setOption(this.option,true);
     }
   },
   mounted(){
     this.$nextTick(function(){
       this.drawPie('day-chart');
     })
+
+    this.$store.dispatch('getPostTime');//获取数据
+
+    setInterval(()=>{
+        // console.log(this.dayTime)
+        this.a()
+    },1000)
+   
+
   }
 }
 </script>

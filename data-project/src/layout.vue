@@ -2,7 +2,7 @@
     <div class="layout">
         <Row type="flex" class="h">
             <Col span="5" class="layout-menu-left">
-                <Menu active-name="1-1" theme="dark" width="auto" :open-names="['1']">
+                <Menu active-name="1-1" theme="dark" width="auto" :open-names="['1']" @on-select="go">
                     <div class="layout-logo-left"></div>
                     <Submenu name="1">
                         <template slot="title">
@@ -53,7 +53,7 @@
                 <div class="layout-header">
                   <div class="lt">
                     <template>
-                      <Select v-model="model1" style="width:200px" placeholder="请选择产品名称">
+                      <Select v-model="model1" style="width:200px;background:red;" placeholder="请选择产品名称">
                           <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
                       </Select>
                     </template>
@@ -117,7 +117,6 @@
                     }
                 ],
                 model1: '',
-
                 value1: [],
                 data: [{
                     value: 'ios',
@@ -156,24 +155,75 @@
                 }],
 
             }
+        },
+        methods:{
+            go(name){
+                switch (name) {
+                    case '1-1':
+                        this.$router.push({path:'/'})
+                        break;
+                    case '1-2':
+                        this.$router.push({path:'page_1_2'})
+                        break;
+                    case '1-3':
+                        this.$router.push({path:'page_1_3'})
+                        break;
+                    case '1-4':
+                        this.$router.push({path:'page_1_4'})
+                        break;
+                    case '1-5':
+                        this.$router.push({path:'page_1_5'})
+                        break;
+                    case '2-1':
+                        this.$router.push({path:'page_2'})
+                        break;
+                    case '2-2':
+                        this.$router.push({path:'page_2_2'})
+                        break;
+                    case '3-1':
+                        this.$router.push({path:'page_3'})
+                        break;
+                    case '3-2':
+                        this.$router.push({path:'page_3_2'})
+                        break;
+                    case '4-1':
+                        this.$router.push({path:'page_4'})
+                        break;
+                    case '4-2':
+                        this.$router.push({path:'page_4_2'})
+                        break;
+                    case '5-1':
+                        this.$router.push({path:'page_5'})                        
+                        break;
+                    case '5-2':
+                        this.$router.push({path:'page_5_2'})
+                        break;
+                    default:
+                        break;
+                }
+                // console.log(name)//this.$router.go('/login');//其中login是你定义的一个路由模块
+            }
         }
     }
 </script>
-<style scoped>
+<style>
     .layout{
-        border: 1px solid #d7dde4;
-        background: #f5f7f9;
+        border: 1px solid #1c2438;
+        background: #495060;
         position: relative;
     }
     .layout-breadcrumb{
         padding: 10px 15px 0;
+        background-color: #5b6270;
+        border: 2px double #80848f;
     }
     .layout-content{
         min-height: 900px;
         margin: 15px;
         overflow: hidden;
-        background: #fff;
+        background: #495060;
         border-radius: 4px;
+        border: 2px solid #80848f;
     }
     .layout-content-main{
         padding: 10px;
@@ -181,15 +231,15 @@
     .layout-copy{
         text-align: center;
         padding: 10px 0 20px;
-        color: #9ea7b4;
+        color: #bbbec4;
     }
     .layout-menu-left{
         background: #464c5b;
     }
     .layout-header{
         height: 60px;
-        background: #fff;
-        box-shadow: 0 1px 1px rgba(0,0,0,.1);
+        background: #495060;
+        box-shadow: 0 1px 1px rgba(0,0,0,.5);
         padding: 13px 70px;
     }
     .layout-logo-left{

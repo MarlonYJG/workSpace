@@ -1,5 +1,5 @@
 <template>
-  <div id="chart">
+  <div id="chart" class="tabel">
     <p>设备分布图</p>
     <div id="equip" class="equip">
 
@@ -106,13 +106,21 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
+.tabel{
+  border: 1px solid #80848f; 
+  overflow: hidden; 
+}
 p{
-  height: 30px;
   padding: 6px;
+  margin: 5px 10px;
   text-align: center;
+   border: 1px solid #80848f; 
 }
 .equip{
   height: 675px;
+  margin: 5px;
+  border: 1px solid #80848f; 
+  /* border-radius: 6px; */
 }
 </style>

@@ -29,7 +29,7 @@ export default {
                 pName: 'ToolBar',
                 events: {
                     init(instance) {
-                        console.log(instance);
+                        // console.log(instance);
                     }
                 }
             }],
@@ -47,19 +47,18 @@ export default {
                 }
             },
             chart: null,
-            category:["2017-11-2", "2017-11-3", "2017-11-4", "2017-11-5", "2017-11-6", "2017-11-7", "2017-11-8", "2017-11-9", "2017-11-10", "2017-11-11", "2017-11-12", "2017-11-13", "2017-11-14", "2017-11-15", "2017-11-16", "2017-11-17", "2017-11-18", "2017-11-19", "2017-11-20", "2017-11-21"],
-            dottedBase:1511231340206,
-            lineData:[235.59034200383263, 345.7848878311589, 301.86529490920351, 217.08871028925958, 178.32669852860411, 233.87594412671245, 230.10389735106668, 376.1255737168191, 380.9695579197111, 392.39143847431197, 396.0215788220616, 345.36442109387298, 363.19945770489153, 357.78295661317236, 344.39300526522604, 335.35929609098412, 316.45766883752384, 390.1558884558292, 387.02664076633303, 391.71497549438516],
-            barData:[101.83012734537962, 201.53825252526971, 204.47073769074697, 110.51162506162747, 120.745269917398439, 350.00061626732007, 109.73324080435174, 289.6188222841112, 376.44650618279712, 366.62167672724283, 319.57450447772864, 316.696338853527237, 388.9558282479843, 288.75865937825296, 393.39638243885884, 319.10586780328858, 225.29240430332918, 339.7349983550872, 385.9016724254795, 383.21668134054892],
-            color:['#a6c84c', '#ffa022', '#46bee9'],
-            series:[],
+        }
+    },
+    computed: {//关联vuex中的数据（动态）
+        chartsObj(){
+            return this.$store.getters.getChartsObj;
         }
     },
     methods:{
         darwEch:function(id){
             this.chart = echarts.init(document.getElementById(id))
             this.chart.setOption({
-                backgroundColor: '#0f375f',
+                backgroundColor: '#404A59',
                 tooltip: {
                     trigger: 'axis',
                     axisPointer: {
@@ -71,7 +70,7 @@ export default {
                     }
                 },
                 xAxis: {
-                    data: this.category,
+                    data: this.chartsObj.category,
                     axisLine: {
                         lineStyle: {
                             color: '#ccc'
@@ -100,7 +99,7 @@ export default {
                         showAllSymbol: true,
                         symbol: 'emptyCircle',
                         symbolSize: 5,
-                        data: this.lineData
+                        data: this.chartsObj.lineData
                     },
                     {
                         name: '24小时启用次数',
@@ -118,7 +117,7 @@ export default {
                                 )
                             }
                         },
-                        data: this.barData
+                        data: this.chartsObj.barData
                     },
                     {
                         name: '预计开启次数',
@@ -138,7 +137,7 @@ export default {
                             }
                         },
                         z: -12,
-                        data: this.lineData
+                        data: this.chartsObj.lineData
                     },
                     {
                         name: 'dotted',
@@ -146,14 +145,14 @@ export default {
                         symbol: 'rect',
                         itemStyle: {
                             normal: {
-                                color: '#0f375f'
+                                color: '#404A59'
                             }
                         },
                         symbolRepeat: true,
                         symbolSize: [12, 4],
                         symbolMargin: 1,
                         z: -10,
-                        data: this.lineData
+                        data: this.chartsObj.lineData
                     }
                 ]
             });
@@ -161,15 +160,15 @@ export default {
         moke:function(){
             var that=this;
             setInterval(function(){
-                that.lineData.forEach(function(i,item,arr){
+                that.chartsObj.lineData.forEach(function(i,item,arr){
                     arr[item]=i+(Math.random()*100-50);
                 });
-                that.barData.forEach(function(i,item,arr){
+                that.chartsObj.barData.forEach(function(i,item,arr){
                     arr[item]=i+(Math.random()*(50-5+1));
                 });
-                console.log(Math.random()*100-50);
+                // console.log(Math.random()*100-50);
                 that.darwEch("start");
-            },3000);
+            },2000);
         }
         
     },
@@ -181,6 +180,7 @@ export default {
             this.darwEch("start");
             // this.moke();
         });
+        // console.log(this.chartsObj)
        
     }
 }
@@ -191,7 +191,7 @@ export default {
 .tabel{
     width: 100%;
     height: 290px;
-    border: 1px solid #495060;
+  border: 1px solid #80848f;  
     margin-top: 15px; 
 }
 .tabel:nth-child(2){
@@ -199,15 +199,13 @@ export default {
 }
 .tabel p{
     text-align: center;
-    height: 25px;
-    line-height: 25px;
-   border: 1px solid #495060;
+   border: 1px solid #80848f;
+   margin: 5px 10px;
 }
 .tabel>div{
     width: 100%;
     height: 263px;
-    padding: 5px 10px;
-   
+    margin: 5px 10px;
 }
 .tabel:nth-child(2)>div{
     height: 358px;

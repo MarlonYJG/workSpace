@@ -6,6 +6,8 @@ import AMap from 'vue-amap';
 
 import Layout from './layout'
 import router from './router'
+import store from './store'
+
 import 'iview/dist/styles/iview.css';    // 使用 CSS
 import echarts from 'echarts'
 
@@ -22,6 +24,7 @@ AMap.initAMapApiLoader({
 new Vue({
   el: '#app',
   router,
+  store,
   template: '<Layout/>',
   components: { Layout }
 })

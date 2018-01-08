@@ -9,6 +9,12 @@
                   <li>00:00:30</li>
               </ul>
               <ul class="data-title">
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+              </ul>
+              <ul class="data-title">
                   <router-link v-for="(item,index) in proList" tag="li" :to="{path:item.path}" :key="index">{{ item.name }}</router-link>
               </ul>
           </div>
@@ -53,16 +59,15 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .t-title{
     width: 100%;
     height: 165px;
-    border: 1px solid #495060;
+    color: rgba(255,255,255,.7);
+    border: 1px solid #80848f;
 }
 .datas{
     width: 100%;
-    height: 82px;
-   border: 1px solid #495060; 
 }
 .data-title{
     width: 100%;
@@ -71,22 +76,37 @@ export default {
 }
 .data-title:nth-child(1){
     font-weight: bolder;
+    margin-top: 5px;
 }
 .data-title>li{
     float: left;
-    width: 200px;
+    width: 180px;
     height: 40px;
     text-align: center;
+    margin: 0 10px;
+   border: 1px solid #80848f;  
+    border-radius: 1px;
+}
+.data-title:nth-child(2){
+    height: 65px;
+    line-height: 65px;
+    margin: 5px 0;
 }
 .data-title:nth-child(2)>li{
+    height: 65px;
     box-sizing: border-box;
-    border: 1px solid #495060; 
+}
+.data-title:nth-child(3)>li{
+    box-sizing: border-box;
+    border: 1px solid #80848f; 
     border-radius: 6px;
+    cursor: pointer;
 }
 .chart{
-    border: 1px solid red;
     width: 100%;
     min-height: 500px;
     margin-top: 15px;
+    
+    color: rgba(255,255,255,.7);
 }
 </style>

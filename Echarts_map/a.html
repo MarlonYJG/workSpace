@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>echats - map</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        div{
+            width: 500px;
+            height: 800px;
+            border: 1px solid red;
+        }
+    </style>
+
+    <script src="./js/echarts.js"></script>
+    <script src="./js/echarts-gl.min.js"></script>
+
+</head>
+<body>
+
+        <div style="width:1200px;height:1200px;margin:0 auto;margin-top:250px;">
+
+                <div id="main" style="width:1000px;height:1000px;border:1px solid red"></div>
+            </div>
+
+    <script>
+        var myChart = echarts.init(document.getElementById("main"));
+        option = {
+    backgroundColor: '#000',
+    globe: {
+        baseTexture: '/asset/get/s/data-1491890179041-Hkj-elqpe.jpg',
+        heightTexture: '/asset/get/s/data-1491889019097-rJQYikcpl.jpg',
+
+        displacementScale: 0.1,
+
+        shading: 'lambert',
+        
+        environment: '/asset/get/s/data-1491837999815-H1_44Qtal.jpg',
+        
+        light: {
+            ambient: {
+                intensity: 0.1
+            },
+            main: {
+                intensity: 1.5
+            }
+        },
+
+        layers: [{
+            type: 'blend',
+            blendTo: 'emission',
+            texture: '/asset/get/s/data-1491890291849-rJ2uee5ag.jpg'
+        }, {
+            type: 'overlay',
+            texture: '/asset/get/s/data-1491890092270-BJEhJg96l.png',
+            shading: 'lambert',
+            distance: 5
+        }]
+    },
+    series: []
+}
+        myChart.setOption(option);
+
+    </script>
+    
+    
+</body>
+</html>
