@@ -1,6 +1,6 @@
-# 一个使用vuejs搭建的数据分析demo
+# 一个使用vue搭建的数据可视化平台
 
-> 一个使用vuejs搭建的数据分析demo
+> 一个使用vuejs搭建的数据可视化demo
 
 ## Build Setup
 
