@@ -1,6 +1,6 @@
 <template>
   <div>
-      <div class="map" id="main">1</div>
+      <div class="map" id="main">11</div>
       <div class="map-list">
         <p>活跃用户数据代表</p>
         <div id="pic">
