@@ -20,32 +20,32 @@
                             <Icon type="ios-keypad"></Icon>
                             用户探索
                         </template>
-                        <MenuItem name="2-1">Option 1</MenuItem>
-                        <MenuItem name="2-2">Option 2</MenuItem>
+                        <MenuItem name="2-1">用户画像</MenuItem>
+                        <MenuItem name="2-2">用户分群</MenuItem>
                     </Submenu>
                     <Submenu name="3">
                         <template slot="title">
                             <Icon type="ios-analytics"></Icon>
                             用户行为探索
                         </template>
-                        <MenuItem name="3-1">Option 1</MenuItem>
-                        <MenuItem name="3-2">Option 2</MenuItem>
+                        <MenuItem name="3-1">页面访问</MenuItem>
+                        <MenuItem name="3-2">事件分析</MenuItem>
                     </Submenu>
                     <Submenu name="4">
                       <template slot="title">
                         <Icon type="soup-can-outline"></Icon>
                         产品业务分析
                       </template>
-                      <MenuItem name="4-1">23</MenuItem>
-                      <MenuItem name="4-2">24</MenuItem>
+                      <MenuItem name="4-1">交易分析</MenuItem>
+                      <MenuItem name="4-2">复购分析</MenuItem>
                     </Submenu>
                     <Submenu name="5">
                       <template slot="title">
                         <Icon type="compass"></Icon>
                         数据探索
                       </template>
-                      <MenuItem name="5-1">23</MenuItem>
-                      <MenuItem name="5-2">234</MenuItem>
+                      <MenuItem name="5-1">数据探索</MenuItem>
+                      <!-- <MenuItem name="5-2">234</MenuItem> -->
                     </Submenu>
                 </Menu>
             </Col>
@@ -80,7 +80,7 @@
                     </div>
                 </div>
                 <div class="layout-copy">
-                    2011-2016 &copy; TalkingData
+                    2017-2018 &copy; marlonYJG
                 </div>
             </Col>
         </Row>

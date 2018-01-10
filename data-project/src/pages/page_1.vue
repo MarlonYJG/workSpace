@@ -64,7 +64,7 @@ export default {
     width: 100%;
     height: 165px;
     color: rgba(255,255,255,.7);
-    border: 1px solid #80848f;
+   border: 1px solid #80848f; 
 }
 .datas{
     width: 100%;
@@ -107,6 +107,6 @@ export default {
     min-height: 500px;
     margin-top: 15px;
     
-    color: rgba(255,255,255,.7);
+   color: rgba(255,255,255,.7); 
 }
 </style>
