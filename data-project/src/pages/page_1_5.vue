@@ -360,7 +360,7 @@ export default {
                 fontSize: "16"
               }
             },
-            data: [ "5", "4", "3", "2", "1"]
+            data: ["5", "4", "3", "2", "1"]
           },
           {
             axisTick: "none",
@@ -371,14 +371,7 @@ export default {
                 fontSize: "16"
               }
             },
-            data: [
-              
-              "12566",
-              "12566",
-              "12566",
-              "12566",
-              "12566"
-            ]
+            data: ["12566", "12566", "12566", "12566", "12566"]
           },
           {
             name: "单位：件",
@@ -400,7 +393,7 @@ export default {
             name: "条",
             type: "bar",
             yAxisIndex: 0,
-            data: [ 33, 44, 78, 59, 15],
+            data: [33, 44, 78, 59, 15],
             label: {
               normal: {
                 show: true,
@@ -430,7 +423,7 @@ export default {
             type: "bar",
             yAxisIndex: 1,
             barGap: "-100%",
-            data: [ 99.5, 99.5, 99.5, 99.5, 99.5],
+            data: [99.5, 99.5, 99.5, 99.5, 99.5],
             barWidth: 20,
             itemStyle: {
               normal: {
@@ -445,7 +438,7 @@ export default {
             type: "bar",
             yAxisIndex: 2,
             barGap: "-100%",
-            data: [ 100, 100, 100, 100, 100],
+            data: [100, 100, 100, 100, 100],
             barWidth: 24,
             itemStyle: {
               normal: {
@@ -507,7 +500,7 @@ export default {
   line-height: 25px;
   text-align: center;
 }
-.quality-list > div{
+.quality-list > div {
   height: 400px;
 }
 </style>

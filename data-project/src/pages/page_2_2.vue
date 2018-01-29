@@ -1,12 +1,21 @@
 <template>
   <div class="router-pages">
-      2-2
+      <u-table></u-table>
   </div>
 </template>
 
 <script>
-export default {
 
+import UTable from '../components/base/utable'
+export default {
+  components: {
+    UTable
+  },
+  data () {
+    return {
+      
+    }
+  },
 }
 </script>
 

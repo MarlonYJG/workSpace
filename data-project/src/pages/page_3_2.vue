@@ -1,12 +1,16 @@
 <template>
   <div class="router-pages">
-      3_2
+      <event-list></event-list>
   </div>
 </template>
 
 <script>
-export default {
+import EventList from '../components/base/eventList'
 
+export default {
+  components: {
+    EventList
+  },
 }
 </script>
 
