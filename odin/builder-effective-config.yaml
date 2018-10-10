@@ -3,7 +3,7 @@ directories:
   buildResources: build
 publish:
   - provider: generic
-    url: 'http://localhost/odinServer'
+    url: 'https://github.com/MarlonYJG/workSpace/tree/master/odin'
 appId: Odin.Browser
 win:
   icon: public\img\tray\app.ico

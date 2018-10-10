@@ -1,8 +1,8 @@
-version: 3.0.0
+version: 2.0.0
 files:
-  - url: Odin-ABC_setup_3.0.0.exe
-    sha512: ejLpdliSv7yAOj2/9JjEt28swhnTdfamU51mgBw4/gjWx3LimTybbuoHrSmnVs6eQH7yLqeptbDtUqQIX7cyeg==
-    size: 39917373
-path: Odin-ABC_setup_3.0.0.exe
-sha512: ejLpdliSv7yAOj2/9JjEt28swhnTdfamU51mgBw4/gjWx3LimTybbuoHrSmnVs6eQH7yLqeptbDtUqQIX7cyeg==
-releaseDate: '2018-10-09T11:54:28.701Z'
+  - url: Odin-ABC_setup_2.0.0.exe
+    sha512: mu6sHVzDo6v/aP1QZuJOuSkgBC8lG0sFpu9r0TQ8I8/3zeEdgdMGXatuR0ydWLU6XsniEHa7dXR1KVoI5h9E0Q==
+    size: 89861720
+path: Odin-ABC_setup_2.0.0.exe
+sha512: mu6sHVzDo6v/aP1QZuJOuSkgBC8lG0sFpu9r0TQ8I8/3zeEdgdMGXatuR0ydWLU6XsniEHa7dXR1KVoI5h9E0Q==
+releaseDate: '2018-10-10T02:11:08.264Z'
