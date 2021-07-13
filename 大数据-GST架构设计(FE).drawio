@@ -1,10 +1,10 @@
-<mxfile host="app.diagrams.net" modified="2021-07-12T03:17:43.717Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36" etag="f8Z8IS2O9krJBf4HockS" version="14.8.5" type="github">
+<mxfile host="app.diagrams.net" modified="2021-07-13T09:44:44.364Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36" etag="s2pH4lM3Wk5VbFXSFN-t" version="14.8.6" type="github">
   <diagram id="TQ8TZAOmtxQGJ_eILdmD" name="GST-架构设计(FE)">
-    <mxGraphModel dx="9137" dy="4979" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="7937" dy="5364" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="X6bCjIrg8prDl-xt0T5_-0" />
         <mxCell id="X6bCjIrg8prDl-xt0T5_-1" parent="X6bCjIrg8prDl-xt0T5_-0" />
-        <mxCell id="LpB_Nem_DClSsvNiDQ5J-0" value="" style="group" vertex="1" connectable="0" parent="X6bCjIrg8prDl-xt0T5_-1">
+        <mxCell id="LpB_Nem_DClSsvNiDQ5J-0" value="" style="group" parent="X6bCjIrg8prDl-xt0T5_-1" vertex="1" connectable="0">
           <mxGeometry x="-10" y="-490" width="3480" height="3450" as="geometry" />
         </mxCell>
         <mxCell id="X6bCjIrg8prDl-xt0T5_-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="LpB_Nem_DClSsvNiDQ5J-0" vertex="1">
@@ -450,6 +450,24 @@
         </mxCell>
         <mxCell id="X6bCjIrg8prDl-xt0T5_-163" value="" style="shape=singleArrow;whiteSpace=wrap;html=1;" parent="LpB_Nem_DClSsvNiDQ5J-0" vertex="1">
           <mxGeometry x="2590" y="2671.25" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="MHVWrfgJYYY1M0PptaI4-1" value="&lt;font style=&quot;font-size: 16px&quot;&gt;访问层&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#CC0000;" vertex="1" parent="X6bCjIrg8prDl-xt0T5_-1">
+          <mxGeometry x="-310" y="-490" width="250" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="MHVWrfgJYYY1M0PptaI4-2" value="&lt;font style=&quot;font-size: 16px&quot;&gt;渲染层&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#CC0000;" vertex="1" parent="X6bCjIrg8prDl-xt0T5_-1">
+          <mxGeometry x="-310" y="-320" width="250" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="MHVWrfgJYYY1M0PptaI4-3" value="&lt;font style=&quot;font-size: 16px&quot;&gt;前端UI&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#CC0000;" vertex="1" parent="X6bCjIrg8prDl-xt0T5_-1">
+          <mxGeometry x="-310" y="90" width="250" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="MHVWrfgJYYY1M0PptaI4-4" value="&lt;span style=&quot;font-size: 16px&quot;&gt;业务层&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;sketch=1;strokeColor=#CC0000;" vertex="1" parent="X6bCjIrg8prDl-xt0T5_-1">
+          <mxGeometry x="-310" y="1190" width="250" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="MHVWrfgJYYY1M0PptaI4-5" value="&lt;font style=&quot;font-size: 16px&quot;&gt;数据层&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#CC0000;" vertex="1" parent="X6bCjIrg8prDl-xt0T5_-1">
+          <mxGeometry x="-310" y="2290" width="250" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="MHVWrfgJYYY1M0PptaI4-6" value="&lt;font style=&quot;font-size: 16px&quot;&gt;通信层&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#CC0000;" vertex="1" parent="X6bCjIrg8prDl-xt0T5_-1">
+          <mxGeometry x="-310" y="2860" width="250" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
