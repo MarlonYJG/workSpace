@@ -1,10 +1,10 @@
-<mxfile host="app.diagrams.net" modified="2021-07-12T03:14:32.935Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36" etag="PRSLzI_l0NK2ikSlnc1q" version="14.8.5" type="github">
+<mxfile host="app.diagrams.net" modified="2021-07-14T08:35:45.822Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36" etag="PlYdR0zcKCeVAi3x-BLl" version="14.8.6" type="github">
   <diagram id="En5fsH0qPfYvG1PNKuJf" name="GST-全流程架构图(FE)">
-    <mxGraphModel dx="4155" dy="3074" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1422" dy="2008" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="nkBP9FhSrCLW1QHYpYpv-4" value="" style="group" vertex="1" connectable="0" parent="1">
+        <mxCell id="nkBP9FhSrCLW1QHYpYpv-4" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="20" y="-70" width="3260" height="1430" as="geometry" />
         </mxCell>
         <mxCell id="Kza3IiyWU27NG2U3xxo6-1" value="" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=#FFFFFF;" parent="nkBP9FhSrCLW1QHYpYpv-4" vertex="1">
