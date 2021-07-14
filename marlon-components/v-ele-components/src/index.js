@@ -3,13 +3,14 @@
  * @Date: 2020-11-22 21:49:06
  * @LastEditors: Marlon
  * @LastEditTime: 2020-11-22 22:00:02
- * @Description: 
+ * @Description:
  */
 import EleTable from '../packages/table/index.js';
-
+import EleFormDig from '../packages/formDialog/index.js';
 
 const components = [
-    EleTable
+    EleTable,
+    EleFormDig
 ]
 
 
@@ -30,4 +31,3 @@ export default {
     install,
     EleTable,
 }
-

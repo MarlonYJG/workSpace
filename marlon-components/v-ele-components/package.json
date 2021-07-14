@@ -1,7 +1,7 @@
 {
   "name": "v-ele-components",
   "description": "基于elementui的组件封装",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "marlon.yjg@gmail.com",
   "license": "MIT",
   "private": false,
@@ -11,6 +11,8 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
+    "@riophae/vue-treeselect": "^0.4.0",
+    "sortablejs": "^1.12.0",
     "vue": "^2.5.11"
   },
   "browserslist": [
